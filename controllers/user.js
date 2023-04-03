@@ -97,8 +97,8 @@ const logout = (req,res) => {
         
         res.cookie("token",'',{
             expires: new Date(Date.now()),
-            sameSite: 'lax',
-            secure: false 
+            sameSite: 'none',
+            secure: true 
         }).json({
             success: true,
             message: "Successfully logged out"
